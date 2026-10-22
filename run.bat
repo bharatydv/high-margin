@@ -28,4 +28,10 @@ if not exist "service_account.json" if not exist "credentials.json" (
     echo.
 )
 
+rem Skip Streamlit's one-time "Email:" prompt on a fresh PC
+if not exist "%USERPROFILE%\.streamlit\credentials.toml" (
+    mkdir "%USERPROFILE%\.streamlit" 2>nul
+    (echo [general]& echo email = "") > "%USERPROFILE%\.streamlit\credentials.toml"
+)
+
 ".venv\Scripts\python.exe" -m streamlit run app.py
