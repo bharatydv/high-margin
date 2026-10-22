@@ -7,4 +7,3 @@ __pycache__/
 .streamlit/secrets.toml
 .venv/
 node_modules/
-*.pptx

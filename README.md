@@ -4,6 +4,20 @@ Streamlit app: enter a login id, get the account overview plus every trade with 
 derived **Margin** column, and trades using more than 70% of the account size
 shaded yellow.
 
+## Quick start (Windows)
+
+```powershell
+git clone https://github.com/bharatydv/high-margin.git
+cd high-margin
+# copy service_account.json (the Google service account key) into this folder
+.\run.bat
+```
+
+`run.bat` creates the virtual environment on first run, installs
+`requirements.txt` and opens the app at http://localhost:8501. Needs Python 3.
+The key is not in the repo on purpose — without it the app still runs, but
+Margin stays blank. Guides for users: `High_Margin_Beginners_Guide.pptx`.
+
 ## Data flow
 
 1. `GET https://fdlapiprod.fpfxtech.io/get/account/overview/{login_id}` — the plan
