@@ -1,0 +1,10 @@
+credentials.json
+service_account.json
+*.json.key
+service-account*.json
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.venv/
+node_modules/
+*.pptx
